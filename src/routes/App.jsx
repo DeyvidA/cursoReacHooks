@@ -9,14 +9,13 @@ import Success from '../containers/Success';
 import Layout from '../components/Layout';
 import NotFound from '../containers/NotFound';
 import AppContext from '../context/AppContext';
-import useInitialState from '../hooks/useInitialState'
 import useInitialState from '../hooks/useInitialState';
 
 const App = () => {
-  const useInitialState = useInitialState();
+  const initialState = useInitialState();
 
   return (
-    <AppContext.Provider value={}>
+    <AppContext.Provider value={initialState}>
       <BrowserRouter>
         <Layout>
           <Routes>
